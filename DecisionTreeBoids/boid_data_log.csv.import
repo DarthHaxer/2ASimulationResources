@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://3p1vuhlf5lhn"
+
+[deps]
+
+files=["res://boid_data_log.Time Est.translation", "res://boid_data_log.Reward.translation", "res://boid_data_log.Effort.translation", "res://boid_data_log.Tasks Unompleted.translation", "res://boid_data_log.Group ID.translation"]
+
+source_file="res://boid_data_log.csv"
+dest_files=["res://boid_data_log.Time Est.translation", "res://boid_data_log.Reward.translation", "res://boid_data_log.Effort.translation", "res://boid_data_log.Tasks Unompleted.translation", "res://boid_data_log.Group ID.translation"]
+
+[params]
+
+compress=true
+delimiter=0

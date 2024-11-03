@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://m135fm2c77il"]
+
+[ext_resource type="Script" path="res://task_scene/create_tasks.gd" id="1_titwl"]
+
+[node name="AssignedTasks" type="Node2D"]
+show_behind_parent = true
+top_level = true
+script = ExtResource("1_titwl")

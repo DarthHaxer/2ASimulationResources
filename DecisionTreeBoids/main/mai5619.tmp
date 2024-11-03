@@ -1,0 +1,39 @@
+[gd_scene load_steps=9 format=3 uid="uid://b8xbs060jdgew"]
+
+[ext_resource type="Script" path="res://main/main.gd" id="1_qjct2"]
+[ext_resource type="PackedScene" uid="uid://ro4x40gaxuex" path="res://particle_shader/boid_particles.tscn" id="2_35wr5"]
+[ext_resource type="PackedScene" uid="uid://dsbs6nvtkvouu" path="res://grid/Grid.tscn" id="3_gnc8u"]
+[ext_resource type="Script" path="res://grid/map_grid.gd" id="4_i51r4"]
+[ext_resource type="PackedScene" uid="uid://m135fm2c77il" path="res://task_scene/assigned_tasks.tscn" id="6_d4r2c"]
+[ext_resource type="Script" path="res://main/Boids.gd" id="6_l7w0j"]
+[ext_resource type="Script" path="res://main/chart_gen.gd" id="7_77f7w"]
+[ext_resource type="Script" path="res://main/task_tracker.gd" id="8_wv0ed"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_qjct2")
+friend_radius = 28.571
+avoid_radius = 12.142
+min_vel = 20.0
+max_vel = 30.0
+cohesion_factor = 8.619
+separation_factor = 13.334
+
+[node name="BoidParticles" parent="." instance=ExtResource("2_35wr5")]
+
+[node name="Grid" parent="." instance=ExtResource("3_gnc8u")]
+
+[node name="MapGrid" parent="." instance=ExtResource("3_gnc8u")]
+script = ExtResource("4_i51r4")
+
+[node name="Boids" type="Node2D" parent="."]
+show_behind_parent = true
+top_level = true
+script = ExtResource("6_l7w0j")
+
+[node name="AssignedTasks" parent="." instance=ExtResource("6_d4r2c")]
+
+[node name="ChartGen" type="Node2D" parent="."]
+script = ExtResource("7_77f7w")
+
+[node name="TaskCompletionTracker" type="Node2D" parent="."]
+script = ExtResource("8_wv0ed")
